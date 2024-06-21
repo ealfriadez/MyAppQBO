@@ -3,4 +3,8 @@
     <string name="val_etUsuario">Ingrese su usuario</string>
     <string name="val_etPassword">Ingrese su password</string>
     <string name="val_btnAceptar">INGRESAR</string>
+    <string name="val_etNombre">Ingrese su nombre</string>
+    <string name="val_etGenero">Seleccione su genero:</string>
+    <string name="val_rbtMasculino">Masculino</string>
+    <string name="val_rbtFemenino">Femenino</string>
 </resources>
