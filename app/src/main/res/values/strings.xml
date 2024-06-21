@@ -7,4 +7,6 @@
     <string name="val_etGenero">Seleccione su genero:</string>
     <string name="val_rbtMasculino">Masculino</string>
     <string name="val_rbtFemenino">Femenino</string>
+    <string name="val_etPreferencias">Selecciones sus Preferencias:</string>
+    <string name="val_chkDeporte">Deporte</string>
 </resources>
