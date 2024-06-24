@@ -9,4 +9,8 @@
     <string name="val_rbtFemenino">Femenino</string>
     <string name="val_etPreferencias">Selecciones sus Preferencias:</string>
     <string name="val_chkDeporte">Deporte</string>
+    <string name="val_chkDibujo">Dibujo</string>
+    <string name="val_chkOtros">Otras preferencias</string>
+    <string name="val_btnRegistrar">Registrar Contacto</string>
+    <string name="val_btnListar">Listar Contactos</string>
 </resources>

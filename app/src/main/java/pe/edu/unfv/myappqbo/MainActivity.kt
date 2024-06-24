@@ -10,29 +10,33 @@ import com.google.android.material.snackbar.Snackbar
 class MainActivity : AppCompatActivity() {
 
     var buttonLogin: Button? = null
-    var editUsuario: EditText? = null
-    var editPasswor: EditText? = null
+    lateinit var editUsuario: EditText
+    lateinit var editPasswor: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         buttonLogin = findViewById(R.id.btnLogin)
+        editUsuario = findViewById(R.id.etUsuario)
+        editPasswor = findViewById(R.id.etPassword)
+
         buttonLogin?.setOnClickListener {
-            var usuario = editUsuario?.text.toString()
-            var passwor = editPasswor?.text.toString()
+            var usuario = editUsuario.text.toString()
+            var passwor = editPasswor.text.toString()
 
-            if (!usuario.isNullOrEmpty()) editUsuario?.error = "Ingrese su usuario"
-            if (!passwor.isNullOrEmpty()) editPasswor?.error = "Ingrese su password"
-
-            if (validarUsuario(usuario, passwor)) {
-                val intenLogin = Intent(
+            if(usuario == ""){
+                editUsuario.error = "Ingrese su usuario"
+            }else if(passwor == ""){
+                editPasswor.error = "Ingrese su password"
+            }else if (validarUsuario(usuario, passwor)) {
+                val intentLogin = Intent(
                     this, RegistroActivity::class.java
                 ).apply {
                     putExtra("usuario", usuario)
                     putExtra("password", passwor)
                 }
-                    startActivity(intenLogin)
+                    startActivity(intentLogin)
             }else{
                 Snackbar.make(it, "Usuario o password incorrecto",
                 Snackbar.LENGTH_LONG).show()
